@@ -26,4 +26,9 @@ const PostContent = async ({params}) => {
   )
 }
 
+export async function generateStaticParams() {
+  const posts = await getPost();
+  return posts.map((post) => ({ slug: post.slug }));
+}
+
 export default PostContent
