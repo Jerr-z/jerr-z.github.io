@@ -1,9 +1,8 @@
-"use client";
 import React from 'react'
 import moment from 'moment'
 import Link from 'next/link'
 import { getRecentPosts } from '../_services'
-import {useState, useEffect} from 'react'
+
 
 const PostWidget = async () => {
   const recentPosts = await getRecentPosts();
