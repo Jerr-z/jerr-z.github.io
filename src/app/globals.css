@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global CSS */
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  -webkit-font-smoothing: auto;
+  font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+section {
+  padding-top: 133.333px
+}
+
+/* Global CSS Ends */
+
+
+
+
+/* Main Headings */
+
+/* Heading 1 */
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67px;
+}
+/* Heading 2 */
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+}
+/* Heading 3 */  
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+/* Heading CSS Ends */
+
+/*------ General Class Styles ------*/
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 85.333px 200px;
+  gap: 21.333px;
+}
+
+/* NavBar Starts */
+
+.navbar {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 85.333px;
+  box-shadow: 0px 5.333px 80px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar > ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 42.667px;
+  text-decoration: none;
+}
+
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: black;
+  transition: font-weight 0.2s linear;
+}
+
+.navbar > ul > li > a:hover {
+  font-weight: bold;
+}
+
+.active {
+  font-weight: bold;
+}
+/* NavBar Ends */
+
+
+/*------ HOME PAGE CSS ------*/
+
+/* Hero Section CSS */
+.hero-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 85.333px 200px;
+  gap: 21.333px;
+}
+
+.hero-section-title {
+  font-size: 74.667px;
+  font-weight: 500;
+  line-weight: 90px;
+  align-self: stretch;
+}
+
+.hero-section-description {
+  font-size: 20px;
+  font-weight: 400;
+  line-weight: 36px;
+}
+
+.blinking-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hero Section CSS Ends */
+
+
+/* Socials List CSS */
+.socials-list {
+  display: flex;
+  padding: 300px;
+  margin-top:100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 63.333px;
+}
+
+.socials-list-item {
+  list-style: none;
+  display: flex;
+  font-size: 35px;
+  align-items: flex-start;
+  gap: 42.667px;
+}
+
+.socials-icon {
+  color: #6f7176;
+  transition: color 0.5s ease;
+}
+
+.socials-icon:hover {
+  color: black;
+}
+/* Socials List CSS Ends */
+
+/*------ ABOUT ME PAGE CSS ------*/
+
+.about-me-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 85.333px 200px;
+  gap: 21.333px;
+}
+
+.code-block {
+  background-color: #494646;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
