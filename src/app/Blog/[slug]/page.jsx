@@ -6,7 +6,14 @@ import Author from './Author'
 import PostWidget from '../PostWidget'
 import { GetPostContent } from '../../_services'
 
+export async function generateStaticParams() {
+  const posts = await getPost();
+  console.log(posts.edges.map((post) => ({ slug: post.node.slug })))
+  return posts.edges.map((post) => ({ slug: post.node.slug }));
+}
+
 const PostContent = async ({params}) => {
+  const {slug} = params;
   const post = await GetPostContent(params.slug);
   return (
     <div className='container mx-auto px-10 mb-8 mt-20'>
@@ -24,11 +31,6 @@ const PostContent = async ({params}) => {
 
     </div>
   )
-}
-
-export async function generateStaticParams() {
-  const posts = await getPost();
-  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export default PostContent
